@@ -15,7 +15,7 @@ This project provides a set of APIs for user authentication and authorization. I
 
 ### 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-repo-url
+https://github.com/A7med7777/marketGo.git
 cd your-repo
 ```
 
@@ -45,6 +45,7 @@ EMAIL_USE_TLS=True
 
 ### 5. **Run database migrations**
 ```bash
+python manage.py makemigrations
 python manage.py migrate
 ```
 
