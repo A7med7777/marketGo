@@ -15,7 +15,7 @@ This project provides a set of APIs for user authentication and authorization. I
 
 ### 1. **Clone the repository**
 ```bash
-https://github.com/A7med7777/marketGo.git
+git clone https://github.com/A7med7777/marketGo.git
 cd your-repo
 ```
 
