@@ -61,7 +61,7 @@ python manage.py runserver
 ### 1. **User Registration**
 Registers a new user with their details.
 
-- **URL:** `/api/register/`
+- **URL:** `/api/users/register/`
 - **Method:** `POST`
 - **Request Body:**
   ```json
@@ -93,7 +93,7 @@ Registers a new user with their details.
 ### 2. **User Login**
 Logs in a user with either their username or email and password.
 
-- **URL:** `/api/login/`
+- **URL:** `/api/users/login/`
 - **Method:** `POST`
 - **Request Body:**
   ```json
@@ -120,7 +120,7 @@ Logs in a user with either their username or email and password.
 ### 3. **User Logout**
 Logs out the currently authenticated user by deleting their token.
 
-- **URL:** `/api/logout/`
+- **URL:** `/api/users/logout/`
 - **Method:** `POST`
 - **Headers:** 
   - `Authorization: Token your_token_here`
@@ -134,7 +134,7 @@ Logs out the currently authenticated user by deleting their token.
 ### 4. **Password Reset Request**
 Sends a password reset email to the user.
 
-- **URL:** `/api/password-reset/`
+- **URL:** `/api/users/password-reset/`
 - **Method:** `POST`
 - **Request Body:**
   ```json
@@ -152,7 +152,7 @@ Sends a password reset email to the user.
 ### 5. **Password Reset Confirmation**
 Resets the user's password using the token sent via email.
 
-- **URL:** `/reset-password/<uidb64>/<token>/`
+- **URL:** `api/users/reset-password/<uidb64>/<token>/`
 - **Method:** `POST`
 - **Request Body:**
   ```json
@@ -176,7 +176,7 @@ Test the API endpoints by using `curl` commands. For example:
 
 - **Register:**
   ```bash
-  curl -X POST http://127.0.0.1:8000/api/register/ \
+  curl -X POST http://127.0.0.1:8000/api/users/register/ \
        -H 'Content-Type: application/json' \
        -d '{
              "first_name": "John",
@@ -190,7 +190,7 @@ Test the API endpoints by using `curl` commands. For example:
 
 - **Login:**
   ```bash
-  curl -X POST http://127.0.0.1:8000/api/login/ \
+  curl -X POST http://127.0.0.1:8000/api/users/login/ \
        -H 'Content-Type: application/json' \
        -d '{
              "username_or_email": "johndoe",
@@ -200,7 +200,7 @@ Test the API endpoints by using `curl` commands. For example:
 
 - **Logout:**
   ```bash
-  curl -X POST http://127.0.0.1:8000/api/logout/ \
+  curl -X POST http://127.0.0.1:8000/api/users/logout/ \
        -H "Authorization: Token your_token_here"
   ```
 
